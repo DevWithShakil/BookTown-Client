@@ -25,7 +25,7 @@ const SignUp = () => {
       Swal.fire({
         position: "top",
         icon: "success",
-        title: "Congratulation!! Signup Successfully Done!!❤️",
+        title: "Congratulation!! SignUp Successfully Done!!❤️",
         showConfirmButton: true,
         timer: 2500,
       });
@@ -35,7 +35,7 @@ const SignUp = () => {
       Swal.fire({
         position: "top",
         icon: "error",
-        title: "Signup Failure ! please try again!",
+        title: "SignUp Failure ! please try again!",
         showConfirmButton: true,
         timer: 2500,
       });
