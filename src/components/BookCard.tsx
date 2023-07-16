@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { addToCart } from "../redux/features/cart/cartSlice";
 import { useAppDispatch } from "../redux/hook";
 import { IBook } from "../types/bookTypes";
-import  defaultBook  from "../assets/defaultbook.jpg";
+import defaultBook from "../assets/home/books.png";
 
 interface IProps {
   book: IBook;
@@ -25,7 +25,6 @@ const BookCard = ({ book }: IProps) => {
     year,
   } = book;
 
-  
   const handleAddBook = (book: IBook) => {
     dispatch(addToCart(book));
     toast.success("Product Added to Cart Successfully!");
@@ -33,7 +32,7 @@ const BookCard = ({ book }: IProps) => {
   return (
     <div className="card w-64  border-solid border-2 border-sky-500 shadow-xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
       <figure className="px-10 pt-2">
-        <img src={bookImage||defaultBook} alt="Book" className="rounded-xl" />
+        <img src={bookImage || defaultBook} alt="Book" className="rounded-xl" />
       </figure>
       <div className="card-body items-center text-center py-3">
         <h6 className="text-cyan-400 ">Book Id : {id}</h6>

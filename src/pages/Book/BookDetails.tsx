@@ -3,7 +3,7 @@
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useParams } from "react-router-dom";
-import defaultBook from "../../assets/defaultbook.jpg";
+import defaultBook from "../../assets/home/books.png";
 import {
   usePostReviewMutation,
   useSingleBookQuery,
@@ -123,13 +123,8 @@ const BookDetails = () => {
                     <h2 className="text-cyan-500 font-bold">
                       <small className="text-xs">Reviewed By:</small>
                       {item?.writtenBy}
-                      
                     </h2>
-                    <p className="text-sm text-gray-900">{item.title}
-                    
-                  
-
-                    </p>
+                    <p className="text-sm text-gray-900">{item.title}</p>
                     <p className="text-xs font-bold text-red-800">
                       {item.date}
                     </p>
