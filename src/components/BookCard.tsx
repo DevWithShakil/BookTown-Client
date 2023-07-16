@@ -30,7 +30,7 @@ const BookCard = ({ book }: IProps) => {
     toast.success("Product Added to Cart Successfully!");
   };
   return (
-    <div className="card w-64  border-solid border-2 border-sky-500 shadow-xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
+    <div className=" bg-slate-100 card w-45 h-auto shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
       <figure className="px-10 pt-2">
         <img src={bookImage || defaultBook} alt="Book" className="rounded-xl" />
       </figure>

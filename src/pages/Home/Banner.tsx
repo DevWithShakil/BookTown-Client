@@ -20,11 +20,14 @@ const Banner = () => {
                 {" "}
                 <br className="md:flex hidden" />
                 <span className="text-pink-500">
-                  <span className="text-white">Join the</span> Book Catalog
-                  Application !
+                  <span className="text-white">
+                    {" "}
+                    Buy your favorite book from
+                  </span>{" "}
+                  BookTown
                 </span>
                 <br />
-                Online Book House
+                Online Book Hut
               </h2>
 
               <h6 className="font-bold md:text-sm text-xs text-gray-300">
@@ -42,11 +45,13 @@ const Banner = () => {
                 {" "}
                 <br className="md:flex hidden" />
                 <span className="text-green-500">
-                  <span className="text-white">Join the</span> Book Catalog
-                  Application !
+                  <span className="text-white">
+                    Buy your favorite book from
+                  </span>{" "}
+                  BookTown
                 </span>{" "}
                 <br />
-                Online Book House
+                Online Book Hut
               </h2>
 
               <h6 className="font-bold md:text-sm text-xs text-gray-300">
@@ -64,11 +69,14 @@ const Banner = () => {
                 {" "}
                 <br className="md:flex hidden" />
                 <span className="text-yellow-400">
-                  <span className="text-white">Join the</span> Book Catalog
-                  Application !
+                  <span className="text-white">
+                    {" "}
+                    Buy your favorite book from
+                  </span>{" "}
+                  BookTown
                 </span>{" "}
                 <br />
-                Online Book House
+                Online Book Hut
               </h2>
 
               <h6 className="font-bold md:text-sm text-xs text-gray-300">
@@ -86,11 +94,14 @@ const Banner = () => {
                 {" "}
                 <br className="md:flex hidden" />
                 <span className="text-yellow-400">
-                  <span className="text-white">Join the</span> Book Catalog
-                  Application !
+                  <span className="text-white">
+                    {" "}
+                    Buy your favorite book from
+                  </span>{" "}
+                  BookTown
                 </span>{" "}
                 <br />
-                Online Book House
+                Online Book Hut
               </h2>
 
               <h6 className="font-bold md:text-sm text-xs text-gray-300">
