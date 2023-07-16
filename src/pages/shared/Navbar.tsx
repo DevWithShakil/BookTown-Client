@@ -144,7 +144,7 @@ const NavBar = () => {
           )}
         </div>
 
-        <Link to="/" className="btn btn-ghost normal-case text-white text-xl">
+        <Link to="/" className="btn btn-ghost normal-case text-white text-2xl">
           BookTown{" "}
         </Link>
       </div>
@@ -196,7 +196,7 @@ const NavBar = () => {
         ) : (
           <Link to="/login">
             {" "}
-            <button className="btn btn-sm btn-primary">Sign In</button>
+            <button className="btn btn-sm btn-secondary">Sign In</button>
           </Link>
         )}
       </div>

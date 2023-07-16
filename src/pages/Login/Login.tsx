@@ -19,16 +19,14 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
 
- 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
-  const { userEmail,loading } = useAppSelector((state) => state.auth);
+  const { userEmail, loading } = useAppSelector((state) => state.auth);
 
-  
   const dispatch = useAppDispatch();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     dispatch(loginUser({ email: data.email, password: data.password }));
@@ -37,7 +35,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userEmail && !loading) {
-      navigate('/');
+      navigate("/");
     }
   }, [loading, userEmail]);
 
@@ -47,7 +45,7 @@ const Login = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className=" text-center">
             <h1 className="text-5xl font-bold">
-              Login <span className="text-blue-500">Here !</span>{" "}
+              Login <span className="text-blue-500">Your Account!</span>{" "}
             </h1>
 
             <div className="w-1/8 mb-10 md:mb-0 mx-auto">
@@ -81,7 +79,7 @@ const Login = () => {
                       },
                     })}
                     name="email"
-                    placeholder="Email"
+                    placeholder="Enter Your Email"
                     className="input input-bordered"
                   />
 
@@ -101,7 +99,7 @@ const Login = () => {
                     {...register("password", { required: true })}
                     name="password"
                     type="password"
-                    placeholder="Password"
+                    placeholder="Enter Your Password"
                     className="input input-bordered"
                   />
                   {errors.password?.type === "required" && (
@@ -121,7 +119,7 @@ const Login = () => {
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                   <p className="text-sm font-bold mt-4">
-                    Don't you have any Account ?{" "}
+                    You don't have any Account ?{" "}
                     <Link to="/signup" className="text-blue-500 ">
                       Register
                     </Link>{" "}

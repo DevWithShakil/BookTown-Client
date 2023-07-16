@@ -19,7 +19,7 @@ const SignUp = () => {
   const dispatch = useAppDispatch();
   const { isSuccess, error, isLoading } = useAppSelector((state) => state.auth);
 
-  console.log(isSuccess,error, isLoading);
+  console.log(isSuccess, error, isLoading);
   useEffect(() => {
     if (isSuccess && !error) {
       Swal.fire({
