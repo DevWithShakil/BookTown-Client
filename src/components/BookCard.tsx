@@ -15,14 +15,14 @@ const BookCard = ({ book }: IProps) => {
   const {
     id,
     title,
-    bookDescription,
+    // bookDescription,
     bookImage,
     price,
     author,
     genre,
-    rating,
-    publicationDate,
-    year,
+    // rating,
+    // publicationDate,
+    // year,
   } = book;
 
   const handleAddBook = (book: IBook) => {

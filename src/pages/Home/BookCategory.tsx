@@ -5,7 +5,7 @@ import { useGetBooksQuery } from "../../redux/features/book/bookApi";
 import { IBook } from "../../types/bookTypes";
 
 const BooksCategory = () => {
-  const { data, isLoading, error } = useGetBooksQuery(undefined);
+  const { data } = useGetBooksQuery(undefined);
 
   const booksData = data?.data?.data;
 

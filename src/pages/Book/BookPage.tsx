@@ -9,7 +9,7 @@ import BookCard from "../../components/BookCard";
 import Footer from "../shared/Footer";
 
 const BookPage = () => {
-  const { data, isLoading, error } = useGetBooksQuery(undefined);
+  const { data } = useGetBooksQuery(undefined);
   const [searchText, setSearchText] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("");
   const [selectedYear, setSelectedYear] = useState("");

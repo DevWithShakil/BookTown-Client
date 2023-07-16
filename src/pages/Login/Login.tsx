@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Lottie from "lottie-react";
 
@@ -15,9 +15,9 @@ import { useAppDispatch, useAppSelector } from "../../redux/hook";
 
 const Login = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
 
-  const from = location.state?.from?.pathname || "/";
+  // const from = location.state?.from?.pathname || "/";
 
   const {
     register,

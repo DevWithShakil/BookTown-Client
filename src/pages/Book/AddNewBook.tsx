@@ -9,7 +9,7 @@ const AddNewBook = () => {
   const {
     register,
     handleSubmit,
-    reset,
+    // reset,
     formState: { errors },
   } = useForm();
 

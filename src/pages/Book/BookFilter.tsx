@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BookFilter = ({
-  priceRange,
+  // priceRange,
   setSelectedGenre,
   setSearchText,
   searchText,
