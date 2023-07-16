@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import { ReactNode } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import signup from "../../assets/animation/addNewBook.json";
+import addNewBook from "../../assets/animation/addednew.json";
 import { usePostBookMutation } from "../../redux/features/book/bookApi";
 const AddNewBook = () => {
   const {
@@ -54,11 +54,11 @@ const AddNewBook = () => {
         <div className="hero-content flex-col lg:flex-row-reverse  ">
           <div className="text-center ">
             <h1 className="text-5xl font-bold">
-              Add Your <span className="text-blue-500">Favorite Book</span>{" "}
+              Add <span className="text-blue-500">New Book</span>{" "}
             </h1>
 
             <div className="w-1/8 mb-10 md:mb-0 mx-auto">
-              <Lottie animationData={signup} loop={true} />
+              <Lottie animationData={addNewBook} loop={true} />
             </div>
           </div>
 
