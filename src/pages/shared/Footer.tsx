@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="grid grid-flow-col gap-4 text-white">
-            <a href="https://www.facebook.com/hasibulcse" target="blank">
+            <a href="" target="blank">
               <svg
                 xmlns="https://twitter.com/?lang=en"
                 width="24"
