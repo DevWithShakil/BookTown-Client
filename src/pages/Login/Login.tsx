@@ -9,7 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Lottie from "lottie-react";
 
-import login from "../../assets/animation/38435-register.json";
+import login from "../../assets/animation/log-in.json";
 import { loginUser } from "../../redux/features/auth/authSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hook";
 

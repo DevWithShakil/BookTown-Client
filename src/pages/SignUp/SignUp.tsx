@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import signup from "../../assets/animation/118046-lf20-oahmox5rjson.json";
+import signup from "../../assets/animation/signup.json";
 import { createUser } from "../../redux/features/auth/authSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hook";
 
