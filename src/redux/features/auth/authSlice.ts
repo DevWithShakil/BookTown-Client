@@ -18,7 +18,7 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }: { email: string; password: string }) => {
     try {
       // Make the API call here (replace with your actual implementation)
-      const response = await fetch("http://localhost:4000/api/v1/auth/login", {
+      const response = await fetch("http://localhost:5000/api/v1/auth/login", {
         method: "POST",
         body: JSON.stringify({ email, password }),
         headers: {
@@ -51,7 +51,7 @@ export const createUser = createAsyncThunk(
   }) => {
     try {
       const response = await fetch(
-        "http://localhost:4000/api/v1/user/create-user",
+        "http://localhost:5000/api/v1/user/create-user",
         {
           method: "POST",
           body: JSON.stringify({ email, password, firstName, lastName }),
@@ -125,12 +125,12 @@ const authSlice = createSlice({
       .addCase(createUser.fulfilled, (state) => {
         state.isLoading = false;
         state.isSuccess = true;
-    
+
       })
       .addCase(createUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message || "Signup failed";
-     
+
       });
   },
 });
