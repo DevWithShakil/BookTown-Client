@@ -1,17 +1,17 @@
-import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import BookDetails from "../pages/Book/BookDetails";
-import BookPage from "../pages/Book/BookPage";
-import Home from "../pages/Home/Home";
-import NotFound from "../pages/shared/NotFound";
-import Login from "./../pages/Login/Login";
-import SignUp from "../pages/SignUp/SignUp";
-import AddNewBook from "../pages/Book/AddNewBook";
-import WishlistPage from "../pages/Book/WishList";
+import { createBrowserRouter } from 'react-router-dom';
+import Home from "../pages/Home";
+import AllBooks from "../pages/AllBooks";
+import EditBook from "../pages/EditBook";
+import PrivateRoute from "./PrivateRoute";
+import BookDetails from "../pages/BookDetails";
+import SignUp from "../pages/Signup";
+import Login from "../pages/Login";
+import Notfound from "../pages/Notfound";
+import App from '../App';
 
 const routes = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
@@ -19,36 +19,35 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/books",
-        element: <BookPage />,
+        path: '/all-books',
+        element: <PrivateRoute><AllBooks /></PrivateRoute>,
       },
       {
-        path: "/wishlist",
-        element: <WishlistPage />,
-      },
-      {
-        path: "signup",
-        element: <SignUp/>
-      },
-      {
-        path: "add-new-book",
-        element: <AddNewBook/>
-      },
-      {
-        path: "login",
-        element: <Login/>,
-      },
-      {
-        path: "/book-details/:id",
+        path: '/book-details/:id',
         element: <BookDetails />,
       },
     ],
   },
-
   {
-    path: "*",
-    element: <NotFound />,
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/edit-book/:id',
+    element: <PrivateRoute><EditBook /></PrivateRoute>,
+  },
+  {
+    path: '/signup',
+    element: <SignUp />,
+  },
+  {
+    path: '*',
+    element: <Notfound />,
   },
 ]);
 
 export default routes;
+
+
+
+

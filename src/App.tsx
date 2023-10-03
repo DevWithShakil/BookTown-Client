@@ -1,13 +1,14 @@
-import { Toaster } from "react-hot-toast";
-import "./App.css";
-import MainLayout from "./layouts/MainLayout";
+import "react-toastify/dist/ReactToastify.css";
+import RouteList from "./routes/RouteList";
+import './app.css'
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <>
-      <Toaster />
-      <MainLayout />
-    </>
+    <div>
+      <RouteList />
+      <ToastContainer />
+    </div>
   );
 }
 

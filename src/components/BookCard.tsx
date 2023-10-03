@@ -1,59 +1,49 @@
-/* eslint-disable no-unused-vars */
-import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
-import { addToCart } from "../redux/features/cart/cartSlice";
-import { useAppDispatch } from "../redux/hook";
-import { IBook } from "../types/bookTypes";
-import defaultBook from "../assets/home/books.png";
+import { format } from "date-fns";
+import { AiFillHeart } from "react-icons/ai";
 
-interface IProps {
-  book: IBook;
-}
 
-const BookCard = ({ book }: IProps) => {
-  const dispatch = useAppDispatch();
-  const {
-    id,
-    title,
-    // bookDescription,
-    bookImage,
-    price,
-    author,
-    genre,
-    // rating,
-    // publicationDate,
-    // year,
-  } = book;
+const BookCard = ({ book }: any) => {
+    return (
+        <div className="pat-bg relative border-purple-200 font-reem shadow-lg rounded-xl p-4 border">
+            <div className="rounded-lg">
+                <img src={book?.imageURL} className="rounded-xl w-full bg-purple-700 border border-purple-200 h-[200px]" alt="book" />
+            </div>
+            <div className="base-card w-[124px] h-[124px] overflow-hidden absolute -top-2 -left-2">
+                <p
+                    className={`bg-purple-700 p-0.5 -rotate-45 shadow-sm mt-7 -ml-10 text-white text-center text-sm`}
+                >
+                    popular
+                </p>
+            </div>
+            <div className="my-2 mt-4">
+                <div className="flex justify-between">
+                    <p className="text-xl font-bold text-purple-700">{book?.title}</p>
+                    <p className=" text-orange-500"> <AiFillHeart size={30} /> </p>
+                </div>
+                <div className="flex mt-4 justify-between items-center">
+                    <p className="text-[16] font-bold">Genre:</p>
+                    <p className="text-[16]">{book?.genre}</p>
+                </div>
+                <div className="flex justify-between items-center">
+                    <p className="text-[16] font-bold">Author:</p>
+                    <p className="text-[16]">
+                        {book?.author?.name?.firstName} {book?.author?.name?.lastName}
+                    </p>
+                </div>
+                <div className="flex justify-between items-center">
+                    <p className="text-[16] font-bold">Publish:</p>
+                    <p className="text-[16]">
+                        {format(new Date(book?.publicationDate), "PP")}
+                    </p>
+                </div>
 
-  const handleAddBook = (book: IBook) => {
-    dispatch(addToCart(book));
-    toast.success("Product Added to Cart Successfully!");
-  };
-  return (
-    <div className=" bg-slate-100 card w-45 h-auto shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
-      <figure className="px-10 pt-2">
-        <img src={bookImage || defaultBook} alt="Book" className="rounded-xl" />
-      </figure>
-      <div className="card-body items-center text-center py-3">
-        <h6 className="text-cyan-400 ">Book Id : {id}</h6>
-        <h6 className="font-bold  ">{title}</h6>
-        <h6 className="text-cyan-700 font-bold ">Written By : {author}</h6>
-        <h6 className=" text-blue-400 ">Genre : {genre}</h6>
-        <p>${price}</p>{" "}
-        <Link to={`/book-details/${id}`}>
-          <button className="btn btn-outline btn-primary btn-sm mx-2  ">
-            Show Details
-          </button>
-        </Link>
-        <button
-          onClick={() => handleAddBook(book)}
-          className="btn btn-outline btn-primary btn-sm mx-2  "
-        >
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  );
+            </div>
+            <div className="mt-5 flex justify-center">
+                <Link to={`/book-details/${book?._id}`} className="btn btn-circle btn-wide text-xl bg-purple-700 border-0 hover:bg-purple-600 capitalize text-white" >See Details</Link>
+            </div>
+        </div>
+    );
 };
 
 export default BookCard;
