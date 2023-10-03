@@ -1,16 +1,16 @@
-
-import ReviewCard from "@/components/ReviewCard";
-import AddReview from "@/components/modul/AddReview";
-import DeleteModule from "@/components/modul/DeleteBook";
-import { useGetBooksQuery } from "@/redux/features/books/bookApi";
-import { useGetUsersQuery } from "@/redux/features/users/userApi";
-import { IBook } from "@/types/booksTypes";
-import { IUser } from "@/types/globalTypes";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { format } from "date-fns";
-import Loading from "@/components/Loading";
-import Navbar from "@/layouts/Navbar";
+import { useGetUsersQuery } from "../redux/features/users/userApi";
+import Loading from "../components/Loading";
+import { IUser } from "../types/globalTypes";
+import { IBook } from "../types/booksTypes";
+import { useGetBooksQuery } from "../redux/features/books/bookApi";
+import Navbar from "../layouts/Navbar";
+import ReviewCard from "../components/ReviewCard";
+import AddReview from "../components/modul/AddReview";
+import DeleteModule from "../components/modul/DeleteBook";
+
 
 
 export default function BookDetails() {

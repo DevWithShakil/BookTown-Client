@@ -6,9 +6,11 @@ import { useEffect } from "react";
 import {
     MdOutlineManageAccounts,
 } from "react-icons/md";
-import { useGetMeQuery } from "@/redux/features/users/userApi";
+
 import { FaBookReader } from "react-icons/fa";
-import LogOutModule from "@/components/modul/LogOutModule";
+import { useGetMeQuery } from "../redux/features/users/userApi";
+import LogOutModule from "../components/modul/LogOutModule";
+
 
 const Navbar = () => {
     const usertoken = localStorage.getItem("accessToken");

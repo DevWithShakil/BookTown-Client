@@ -12,10 +12,13 @@ import {
 } from "react-icons/gi";
 import { useEffect, useState } from "react";
 import { BiHide, BiShow } from "react-icons/bi";
-import { IUser, IUserFrom } from "@/types/globalTypes";
-import { useCreateUserMutation } from "@/redux/features/users/userApi";
+
+
 import { toast } from "react-toastify";
-import ProgressSpeener from "@/components/ProgressSpeener";
+import { useCreateUserMutation } from "../redux/features/users/userApi";
+import { IUser, IUserFrom } from "../types/globalTypes";
+import ProgressSpeener from "../components/ProgressSpeener";
+
 
 const SignUp = () => {
     const [error, setError] = useState<string>();

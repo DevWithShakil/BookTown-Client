@@ -1,9 +1,9 @@
-import { useDeleteBookMutation } from "@/redux/features/books/bookApi";
 import { useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ProgressSpeener from "../ProgressSpeener";
+import { useDeleteBookMutation } from "../../redux/features/books/bookApi";
 
 
 const DeleteModule = ({ deleteBook, setDelete }: any) => {

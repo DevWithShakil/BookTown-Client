@@ -1,13 +1,15 @@
-import { useGetBooksQuery, useUpdateBookMutation } from "@/redux/features/books/bookApi";
+
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { IBook } from "@/types/booksTypes";
-import ProgressSpeener from "@/components/ProgressSpeener";
-import Loading from "@/components/Loading";
-import Navbar from "@/layouts/Navbar";
+import { IBook } from "../types/booksTypes";
+import { useGetBooksQuery, useUpdateBookMutation } from "../redux/features/books/bookApi";
+import Loading from "../components/Loading";
+import Navbar from "../layouts/Navbar";
+import ProgressSpeener from "../components/ProgressSpeener";
+
 
 const EditBook = () => {
     const navigate = useNavigate();

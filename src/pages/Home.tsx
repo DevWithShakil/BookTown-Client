@@ -1,13 +1,14 @@
-import BookCard from "@/components/BookCard";
-import Loading from "@/components/Loading";
-import AddNewBook from "@/components/modul/AddNewBook";
-import Footer from "@/layouts/Footer";
-import Navbar from "@/layouts/Navbar";
-import { useGetBooksQuery } from "@/redux/features/books/bookApi";
-import { IBook } from "@/types/booksTypes";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useGetBooksQuery } from "../redux/features/books/bookApi";
+import { IBook } from "../types/booksTypes";
+import Loading from "../components/Loading";
+import Navbar from "../layouts/Navbar";
+import BookCard from "../components/BookCard";
+import Footer from "../layouts/Footer";
+import AddNewBook from "../components/modul/AddNewBook";
 
 export default function Home() {
   const { data, isLoading } = useGetBooksQuery(undefined);
@@ -16,12 +17,6 @@ export default function Home() {
   const [searchResults, setSearchResults] = useState([]);
   const books: IBook[] = data?.data;
   const usertoken = localStorage.getItem("accessToken");
-
-
-
-
-
-
 
   const searchBooks: any = books?.filter((book) => {
     const { title, genre, author }: any = book;
